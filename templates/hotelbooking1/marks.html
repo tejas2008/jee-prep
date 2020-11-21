@@ -1,43 +1,70 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <!-- Latest compiled and minified CSS -->
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<link rel="stylesheet" href="../static/css/style.css">
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<title>JEE Prep</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="shortcut icon" type="image/x-icon" href="{% static "images/icon.png" %}" />
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Work+Sans:300,400,700" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}" />
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />   
+<link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}" />
 </head>
 <body>
+<div class="site-wrap">
+<div class="site-mobile-menu">
+<div class="site-mobile-menu-header">
+<div class="site-mobile-menu-close mt-3">
+</div>
+</div>
+</div> 
+<div class="site-section">
     <div class="container">
         <div class="row">
             <div class="col-md-6 mx-auto text-center mb-5 section-heading" style="padding-bottom: 1.5rem;">
             <h2 class="mb-5">Your Result</h2>
             </div>
             </div>
-        <div class="alert alert-primary" role="alert">
+            {% if marks > 0 %}
+        <div class="alert alert-success" role="alert">
             Total Score : {{marks}}
           </div>
+          {% else %}
+          <div class="alert alert-primary" role="alert">
+            Total Score : {{marks}}
+          </div>
+          {% endif %}
           
         {% for result in Exam %} 
             
     <div class="container mt-sm-5 my-1" >
+        <p>Q{{result.Qid}}.</p>
         <p>Your Response: Loreum Ipsum</p>
         <p>Correct Answer: {{result.Corrans}}</p>
     </div>
     {% endfor %}
+
+    <button type="button" class="btn btn-primary btn-grad" style="margin-top: 4%;margin-left: 42%;"><a href="{{index}}"  style="text-decoration:none;color: white;">Back to Home Page</a></button>
+    <button type="button" class="btn btn-primary btn-grad" style="margin-top: 2%;margin-left: 42%;"><a href="{{quiz}}"  style="text-decoration:none;color: white;">Attempt Quiz Again</a></button>
+
     </div>
+</div>
+
+
+
+    </div>
+
+
+
+
+</div>
 </body>
 </html>
+
+
+
+
+
+

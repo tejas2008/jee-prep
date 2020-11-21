@@ -15,15 +15,15 @@ def quiz(request):
         for i in range(3):
             ans = request.POST['radio'+str(i+1)]
             correct_ans = Exam.objects.filter(Qid=str(i+1))[0].Corrans
-            print(correct_ans)
-            print(ans)
+            # print(correct_ans)
+            # print(ans)
             if ans==correct_ans:
                 marks += 4
             else:
                 marks -= 1
         print(marks)
         results=Exam.objects.all()
-        return render(request,'hotelbooking1/marks.html',{"Exam":results,"marks":marks})
+        return render(request,'hotelbooking1/marks.html',{"Exam":results,"marks":marks,'index':'http://127.0.0.1:8000/index/'})
     else:
         results=Exam.objects.all()
         return render(request, 'hotelbooking1/quiz.html',{"Exam":results})
