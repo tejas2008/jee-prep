@@ -14,7 +14,7 @@
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
+<link rel="stylesheet" href="../static/css/style.css">
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,13 +22,18 @@
 </head>
 <body>
     <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto text-center mb-5 section-heading" style="padding-bottom: 1.5rem;">
+            <h2 class="mb-5">Your Result</h2>
+            </div>
+            </div>
         <div class="alert alert-primary" role="alert">
             Total Score : {{marks}}
           </div>
           
         {% for result in Exam %} 
             
-    <div class="container1 mt-sm-5 my-1" >
+    <div class="container mt-sm-5 my-1" >
         <p>Your Response: Loreum Ipsum</p>
         <p>Correct Answer: {{result.Corrans}}</p>
     </div>
