@@ -5,25 +5,15 @@ from datetime import date
 # Create your views here.
 # def Hello1(request):
 #     return  HttpResponse ("Hello!!! This is my first application")
-def index(request):
-    today = datetime.datetime.now().date()  
-    x = datetime.datetime.now() 
-    m=x.strftime("%m")
-    d=x.strftime("%m")
-    f_date = date(x.year, int(m), int(d))
-    l_date = date(x.year, 12, 10)
-    # l_date = date(x.year, 4, 10)
-    delta = l_date - f_date
-    rem=delta.days
-    dict={'today':today,'rem':rem}
-    return render(request, 'hotelbooking1/index.html',context=dict)
+def index(request):    
+    return render(request, 'hotelbooking1/index.html',{'main_link':'http://127.0.0.1:8000/main/','adv_link':'http://127.0.0.1:8000/advance/'})
 
 def quiz(request):
     return render(request, 'hotelbooking1/quiz.html')
 
 def main(request):
-    return render(request, 'hotelbooking1/main.html')
+    return render(request, 'hotelbooking1/main.html',{'quiz_link':'http://127.0.0.1:8000/quiz/'})
 
 def advance(request):
-    return render(request, 'hotelbooking1/advance.html')
+    return render(request, 'hotelbooking1/advance.html',{'quiz_link':'http://127.0.0.1:8000/quiz/'})
 

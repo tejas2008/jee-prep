@@ -36,8 +36,10 @@ body {
      text-decoration: none;
    }
 
-   .btn-grad1 {background-image: linear-gradient(to right, #dd3e0e86 0%, #f1d142  51%,  #c9390e  100%)}
-  .btn-grad1 {
+   /* .btn-grad1 {background-image: linear-gradient(to right, #dd3e0e86 0%, #f1d142  51%,  #c9390e  100%)} */
+   .btn-grad1 {background-image: linear-gradient(to right, #f1d142 0%,  #dd3e0e86  51%, #f1d142  100%)}
+
+   .btn-grad1 {
      /* margin: 10px; */
      padding-right: 2.5rem !important;
      padding-left:  2.5rem !important;

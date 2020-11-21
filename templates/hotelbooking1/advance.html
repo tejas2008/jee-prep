@@ -5,6 +5,7 @@
 <title>JEE Prep</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="shortcut icon" type="image/x-icon" href="{% static "images/icon.png" %}" />
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Work+Sans:300,400,700" rel="stylesheet">
 <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}" />
 <link rel="stylesheet" href="{% static 'css/style.css' %}" />
@@ -31,13 +32,41 @@
     </div>      
         
     <h2 class="h5">
+        <br>
+        <b style="font-size: 1.5rem;">General Instructions :</b><br><br>
         <ul style="list-style-type:disc">
-            <li>Instruction 1</li>
-            <li>Instruction 2</li>
-            <li>Instruction 3</li>
-          </ul></h2><br><br>
+            <li>Total duration of examination is <b>180 minutes</b>.</li>
+            <li>The clock will be set at the server.  </li>
+            <li>The countdown timer in the top right corner of screen will display the remaining time available for you to complete the examination.</li>
+            <li>When the timer reaches zero, the examination will end by itself.</li>
+            <li> You will not be required to end or submit your examination.</li>
+            <li>The Question Palette displayed on the top of screen will show the status of each question.</li>
+        </ul><br><br>
+        <b style="font-size: 1.5rem;">Navigating to a Question :</b><br><br>
+        <ul style="list-style-type:disc">
+            <li>Click on the question number in the Question Palette to go to that numbered question directly.</li>
+            <li>Click on <b>Next</b> to go to the next question.</li>
+            <li>Click on <b>Previous</b> to go to the previous question.</li>
+        </ul>
+        <br><br>
+        <b style="font-size: 1.5rem;">Answering a Question :</b><br><br>
+        <ul style="list-style-type:disc">
+            <li>To select your answer, click on the button of one of the options.</li>
+            <li>To deselect your chosen answer, click on the button of the chosen option again.</li>
+            <li>To change your chosen answer, click on the button of another option</li>
+            <li> To change your answer to a question that has already been answered, first select that question for answering and then follow the procedure for answering that type of question.</li>
+            
+        </ul>
+        <br><br>
+        <b style="font-size: 1.5rem;">Marking Scheme :</b><br><br>
+        <ul style="list-style-type:disc">            
+            <li> <b>Four</b> marks will be awarded for indicating correct response of each question</li>
+            <li>¼ (one fourth) marks i.e. <b>one </b>mark will be deducted for indicating incorrect response of each question. </li>
+            <li> No deduction from the total score will be made if no response is indicated for a question.</li>
+        </ul>
+    </h2><br><br>
         <div class=" mx-auto text-center ">
-        <button type="button" class="btn btn-primary btn-grad"><a>Start Test</a></button></div>
+        <button type="button" class="btn btn-primary btn-grad"><a href="{{quiz_link}}"  style="text-decoration:none;color: white;">Start Test</a></button></div>
     </div>
     </div>
     </div>
