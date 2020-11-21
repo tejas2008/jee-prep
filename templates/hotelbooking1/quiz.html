@@ -76,18 +76,21 @@
             <h2 class="mb-5" style="margin-top: 2rem;margin-bottom: 0rem !important;">JEE Main Mock Test</h2>
             </div>
             </div> 
+            <form method="post">
+                {% csrf_token %}
             {% for result in Exam %} 
+            
     <div class="container1 mt-sm-5 my-1" >
         <div class="question ml-sm-5 pl-sm-5 pt-2">
-            <div class="py-2 h5"><b>Q.{{result.Question}}?</b></div>
+            <div class="py-2 h5"><b>Q{{result.Qid}}. {{result.Question}}?</b></div>
             <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3 h6" id="options" style="font-size: 1rem;">
             <label class="options">{{result.Option1}} 
-            <input type="radio" name="radio"> <span class="checkmark"></span> </label> 
+            <input type="radio" name="radio{{result.Qid}}" value="{{result.Option1}} "> <span class="checkmark"></span> </label> 
             <label class="options">{{result.Option2}}  
-            <input type="radio" name="radio"> <span class="checkmark"></span> </label>
-            <label class="options">{{result.Option3}}  <input type="radio" name="radio"> 
+            <input type="radio" name="radio{{result.Qid}}" value="{{result.Option2}}"> <span class="checkmark"></span> </label>
+            <label class="options">{{result.Option3}}<input type="radio" name="radio{{result.Qid}}" value="{{result.Option3}}"> 
             <span class="checkmark"></span> </label>
-            <label class="options">{{result.Option4}} <input type="radio" name="radio">
+            <label class="options">{{result.Option4}}<input type="radio" name="radio{{result.Qid}}" value="{{result.Option4}}">
             <span class="checkmark"></span> </label> </div>
         </div>
         <!-- <div class="d-flex align-items-center pt-3">
@@ -95,12 +98,12 @@
             <div class="ml-auto mr-sm-5"> <button class="btn btn-success">Next</button> </div>
         </div> -->
     </div>
-    {% end for %} 
+    {% endfor %}
+    <button type="submit">Submit Test</button> 
+    </form>
     </div>
-  
+    <div style="margin-bottom: 5%;"></div>
     </div>
-
-
 
 
 <!-- <footer class="site-footer">
