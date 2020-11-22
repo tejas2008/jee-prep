@@ -10,7 +10,7 @@ def quiz(request):
     if request.POST:
         marks = 0
         user_resp = []
-        for i in range(3):
+        for i in range(30):
             try:
                 ans = request.POST['radio'+str(i+1)]
                 user_resp.append(ans)

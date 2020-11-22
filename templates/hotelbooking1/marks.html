@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />   
 <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}" />
 </head>
-<body>
+<body >
 <div class="site-wrap">
 <div class="site-mobile-menu">
 <div class="site-mobile-menu-header">
@@ -46,7 +46,10 @@
         <p>Option2: {{result.Option2}}</p>
         <p>Option3: {{result.Option3}}</p>
         <p>Option4: {{result.Option4}}</p>
-        <p>Correct Answer: {{result.Corrans}}</p>
+        <div class="alert alert-success" role="alert">
+            <p>Correct Answer: {{result.Corrans}}</p>
+          </div>
+        
     </div>
 
     {% endfor %}
@@ -65,9 +68,7 @@
 </div>
 
 
-
-    </div>
-
+</div>
 
 
 
