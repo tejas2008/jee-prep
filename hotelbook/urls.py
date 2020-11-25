@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url,include
-from hotelbooking.views import index,quiz,main,advance
+from hotelbooking.views import index,quiz,main,advance,quiz_adv
 urlpatterns = [
     # url(r'^hotelbooking/',include('hotelbooking.urls')),
     url('index/',index, name='index'),
     url('quiz/',quiz, name='quiz'),
+    url('quiz_adv/',quiz_adv, name='quiz_adv'),
     url('main/',main, name='main'),
     url('advance/',advance, name='advance'),
     # url(r'^$',views.Hello, name='Hello'),
