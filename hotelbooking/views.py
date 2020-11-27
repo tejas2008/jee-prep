@@ -4,7 +4,7 @@ from datetime import date
 from hotelbooking.models import Exam
 
 def index(request):    
-    return render(request, 'hotelbooking1/index.html',{'main_link':'http://127.0.0.1:8000/main/','adv_link':'http://127.0.0.1:8000/advance/'})
+    return render(request, 'hotelbooking1/index.html',{'main_link':'main/','adv_link':'advance/'})
 
 def quiz(request):
     if request.POST:
@@ -27,7 +27,7 @@ def quiz(request):
         print(user_resp)
         results=Exam.objects.all()
         value = 0
-        return render(request,'hotelbooking1/marks.html',{"Exam":results,"marks":marks,'index':'http://127.0.0.1:8000/index/',"user_resp":user_resp,"value":value})
+        return render(request,'hotelbooking1/marks.html',{"Exam":results,"marks":marks,'index':'index/',"user_resp":user_resp,"value":value})
     else:
         results=Exam.objects.all()
         return render(request, 'hotelbooking1/quiz.html',{"Exam":results})
@@ -53,17 +53,17 @@ def quiz_adv(request):
         print(user_resp)
         results=Exam.objects.all()
         value = 0
-        return render(request,'hotelbooking1/marks.html',{"Exam":results,"marks":marks,'index':'http://127.0.0.1:8000/index/',"user_resp":user_resp,"value":value})
+        return render(request,'hotelbooking1/marks.html',{"Exam":results,"marks":marks,'index':'index/',"user_resp":user_resp,"value":value})
     else:
         results=Exam.objects.all()
         return render(request, 'hotelbooking1/quiz_adv.html',{"Exam":results})
     
 
 def main(request):
-    return render(request, 'hotelbooking1/main.html',{'quiz_link':'http://127.0.0.1:8000/quiz/'})
+    return render(request, 'hotelbooking1/main.html',{'quiz_link':'quiz/'})
 
 def advance(request):
-    return render(request, 'hotelbooking1/advance.html',{'quiz_adv_link':'http://127.0.0.1:8000/quiz_adv/'})
+    return render(request, 'hotelbooking1/advance.html',{'quiz_adv_link':'quiz_adv/'})
 
 
 
