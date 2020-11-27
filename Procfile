@@ -1,1 +1,1 @@
-web: gunicorn hotelbook.wsgi.py:application --log-file -
+web: gunicorn hotelbook.wsgi:application --log-file -
