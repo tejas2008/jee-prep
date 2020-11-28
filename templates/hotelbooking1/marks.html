@@ -53,6 +53,38 @@
     </div>
 
     {% endfor %}
+
+    {% for result1 in results1 %} 
+            
+    <div class="container mt-sm-5 my-1" >
+        <div class="py-2 h5"><b>Q{{result1.Qid}}. {{result1.Question}}</b></div>
+        <p>Option1: {{result1.Option1}}</p>
+        <p>Option2: {{result1.Option2}}</p>
+        <p>Option3: {{result1.Option3}}</p>
+        <p>Option4: {{result1.Option4}}</p>
+        <div class="alert alert-success" role="alert">
+            <p>Correct Answer: {{result1.Corrans}}</p>
+          </div>
+        
+    </div>
+
+    {% endfor %}
+
+    {% for result2 in results2 %} 
+            
+    <div class="container mt-sm-5 my-1" >
+        <div class="py-2 h5"><b>Q{{result2.Qid}}. {{result2.Question}}</b></div>
+        <p>Option1: {{result2.Option1}}</p>
+        <p>Option2: {{result2.Option2}}</p>
+        <p>Option3: {{result2.Option3}}</p>
+        <p>Option4: {{result2.Option4}}</p>
+        <div class="alert alert-success" role="alert">
+            <p>Correct Answer: {{result2.Corrans}}</p>
+          </div>
+        
+    </div>
+
+    {% endfor %}
     <!-- <div class="row">
         <div class="col-md-6 mx-auto text-center mb-5 section-heading" style="padding-bottom: 1.5rem;">
         <h2 class="mb-5">Your Responses</h2>
