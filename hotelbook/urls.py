@@ -26,5 +26,6 @@ urlpatterns = [
     url('advance/',advance, name='advance'),
     # url(r'^$',views.Hello, name='Hello'),
     path('admin/', admin.site.urls),
+    url('',index, name='index'),
 ]
 
