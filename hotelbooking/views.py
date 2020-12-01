@@ -56,13 +56,13 @@ def quiz(request):
 
         print(marks)
         print(user_resp)
-        results=Exam.objects.all()
+        results=Exam.objects.all().order_by('Qid')
         results1=Chemistry.objects.all()
         results2=Math.objects.all()
         value = 0
         return render(request,'hotelbooking1/marks.html',{"Exam":results,"marks":marks,'index':'/index/',"user_resp":user_resp,"value":value,"results1":results1,"results2":results2})
     else:
-        results=Exam.objects.all()
+        results=Exam.objects.all().order_by('Qid')
         results1=Chemistry.objects.all()
         results2=Math.objects.all()
         return render(request, 'hotelbooking1/quiz.html',{"Exam":results,"results1":results1,"results2":results2})
@@ -118,13 +118,13 @@ def quiz_adv(request):
 
         print(marks)
         print(user_resp)
-        results=Exam.objects.all()
+        results=Exam.objects.all().order_by('Qid')
         results1=Chemistry.objects.all()
         results2=Math.objects.all()
         value = 0
         return render(request,'hotelbooking1/marks.html',{"Exam":results,"marks":marks,'index':'/index/',"user_resp":user_resp,"value":value,"results1":results1,"results2":results2})
     else:
-        results=Exam.objects.all()
+        results=Exam.objects.all().order_by('Qid')
         results1=Chemistry.objects.all()
         results2=Math.objects.all()
         return render(request, 'hotelbooking1/quiz_adv.html',{"Exam":results,"results1":results1,"results2":results2})
