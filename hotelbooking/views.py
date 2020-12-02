@@ -57,7 +57,6 @@ def quiz(request):
         print(marks)
         print(user_resp)
         results=Exam.objects.all()
-        print(results)
         results1=Chemistry.objects.all()
         results2=Math.objects.all()
         value = 0
@@ -65,6 +64,7 @@ def quiz(request):
     else:
         results=Exam.objects.all()
         print(results)
+        print(type(results))
         results1=Chemistry.objects.all()
         results2=Math.objects.all()
         return render(request, 'hotelbooking1/quiz.html',{"Exam":results,"results1":results1,"results2":results2})
